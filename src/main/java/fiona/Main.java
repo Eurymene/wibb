@@ -1,6 +1,7 @@
 package fiona;
 
 import fiona.wibb.Response;
+import fiona.wibb.Users;
 import fiona.wibb.Wibb;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletHandler;
@@ -16,10 +17,7 @@ import static fiona.wibb.Wibb.addGet;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        addUser("arne","Arne de Both");
-        addUser("fiona","Fiona de Both");
-        addUser("henry","Henry Wilcox");
-        addUser("lizzy","Elizabeth Bennet");
+        Users users = new Users();
 
 
         addGet("/", req -> ok("met je heuf!"));
@@ -27,8 +25,8 @@ public class Main {
 
         addGet("/user", req -> {
             String id = req.getQueryParameters().get("id");
-            if (getUsers().containsKey(id)) {
-                return ok("User: " + getUsers().get(id).getName());
+            if (users.getUsers().containsKey(id)) {
+                return ok("User: " + users.getUsers().get(id).getName());
             } else {
                 return notFound("No user found for id: "+ id);
             }
