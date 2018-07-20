@@ -1,4 +1,4 @@
-package fiona.wibb;
+package fiona.users;
 
 import java.util.HashMap;
 

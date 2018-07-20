@@ -1,16 +1,10 @@
 package fiona;
 
-import fiona.wibb.Response;
-import fiona.wibb.Users;
+import fiona.users.Users;
 import fiona.wibb.Wibb;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletHandler;
-
-import javax.servlet.http.HttpServletResponse;
 
 import static fiona.wibb.Response.notFound;
 import static fiona.wibb.Response.ok;
-import static fiona.wibb.Users.*;
 import static fiona.wibb.Wibb.addGet;
 
 

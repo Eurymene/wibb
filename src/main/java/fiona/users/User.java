@@ -1,4 +1,4 @@
-package fiona.wibb;
+package fiona.users;
 
 public class User {
     private String id;
